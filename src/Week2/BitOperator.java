@@ -1,3 +1,5 @@
+package Week2;
+
 public class BitOperator {
     public static void main(String[] args) {
         short a = (short)0x55ff;
