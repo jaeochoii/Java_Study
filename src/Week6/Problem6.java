@@ -4,25 +4,22 @@ import java.util.Scanner;
 
 class HistoGram {
     String inputEng() {
-
         StringBuffer stringBuffer=new StringBuffer();
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         while(true) {
-            String sentence = sc.nextLine();
+            String sentence = scanner.nextLine();
             if(sentence.length()==1 && sentence.contains(";")) {
-                System.out.println("종료");
+                System.out.println("히스토그램을 그립니다.");
                 break;
-
-            }stringBuffer.append(sentence);
-
+            }
+            stringBuffer.append(sentence);
         }
         return stringBuffer.toString();
-
     }
 
     void checkEng(String engSentence){
-        int a=65; int b=97; // 아스키코드 A,a 번호
+        int a=65; int b=97;
         char start=65;
         String line = "-";
 
@@ -40,7 +37,6 @@ class HistoGram {
             if(start>90) {
                 break;
             }
-
         }
     }
 }
@@ -49,11 +45,10 @@ public class Problem6 {
 
     public static void main(String[] args) {
 
-        System.out.println("영문 텍스트를 입력하세요");
-        System.out.println("종료를 원할경우 세미콜론(;)을 입력해 주세요");
+        System.out.println("영문 텍스트를 입력하고 세미콜론을 입력하세요.");
 
-        HistoGram histoGram1 = new HistoGram();
-        String input = histoGram1.inputEng();
-        histoGram1.checkEng(input);
+        HistoGram histoGram = new HistoGram();
+        String input = histoGram.inputEng();
+        histoGram.checkEng(input);
     }
 }
