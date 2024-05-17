@@ -15,7 +15,7 @@ class Person {
 
     public String turn() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("["+name+"]: <Enter>");
+        System.out.print("[" + name + "]: <Enter>");
         return scanner.nextLine();
     }
 
@@ -35,7 +35,6 @@ class Person {
                 break;
             }
         }
-
         return result;
     }
 }
@@ -55,20 +54,22 @@ class GamblingGame {
         while(true) {
             for(int i = 0; i < person.length; i += 1) {
                 String s = person[i].turn();
+
                 if(s.equals("")) {
                     if(person[i].RandomNum()) {
                         System.out.println("\t" + person[i].getName() + "님이 이겼습니다!");
                         return;
                     }
+
                     else {
                         System.out.println("\t" + "아쉽군요!");
                     }
                 }
+
                 else {
                     System.out.println("<Enter>키만 입력 가능합니다.");
                     return;
                 }
-
             }
         }
     }
