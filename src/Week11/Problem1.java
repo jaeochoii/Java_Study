@@ -48,7 +48,7 @@ public class Problem1 extends JFrame{
         setSize(300, 300);
         setVisible(true);
 
-        Container c = getContentPane(); // 컨텐트팬은 디폴트로 BorderLayout 배치 관리자.
+        Container c = getContentPane();
 
         c.add(new North(), BorderLayout.NORTH);
         c.add(new Center(), BorderLayout.CENTER);
